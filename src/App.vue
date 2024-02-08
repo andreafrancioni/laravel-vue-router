@@ -3,7 +3,6 @@ import AppEventList from "./components/AppEventList.vue"
 
 import axios from 'axios'; //importo Axios
 import { store } from "./store.js" //state management
-import { RouterView } from "vue-router";
 
 export default {
 	components: {
