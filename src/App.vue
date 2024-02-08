@@ -1,12 +1,12 @@
 <script>
-import AppComponent from "./components/AppComponent.vue"
+import AppEventList from "./components/AppEventList.vue"
 
 import axios from 'axios'; //importo Axios
 import { store } from "./store.js" //state management
 
 export default {
 	components: {
-		AppComponent
+		AppEventList,
 	},
 	data() {
 		return {
@@ -16,11 +16,15 @@ export default {
 	mounted() {
 		this.doThings();
 
-		// axios.get("indirizzo").then(risultato => {
-		// 	console.log(risultato);
-		// }).catch(errore => {
-		// 	console.error(errore);
-		// });
+		let url = this.store.apiUrl + this.store.apiEvent;
+
+		axios.get(url).then(risultato => {
+			this.store.eventArray = risultato.data.results;
+
+			console.log(risultato);
+		}).catch(errore => {
+			console.error(errore);
+		});
 	},
 	methods: {
 		doThings() {
@@ -32,7 +36,7 @@ export default {
 
 <template>
 	<main>
-		<AppComponent />
+		<AppEventList />
 
 		<button class="btn btn-primary">Primary button</button>
 	</main>
