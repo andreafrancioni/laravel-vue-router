@@ -6,8 +6,7 @@ import { store } from "./store.js" //state management
 
 export default {
 	components: {
-		AppEventList,
-		RouterView
+
 	},
 	data() {
 		return {
@@ -39,9 +38,7 @@ export default {
 	<header>
 		Header
 	</header>
-	<main>
-		<router-view></router-view>
-	</main>
+	<router-view></router-view>
 	<footer>
 		Footer
 	</footer>
