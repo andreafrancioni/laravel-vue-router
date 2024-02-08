@@ -13,7 +13,7 @@ export default {
 
 <template>
     <div>
-        <h1>Eventi</h1>
+        <h1 class="text-center">Eventi</h1>
 
         <div class="container">
             <div class="row">
