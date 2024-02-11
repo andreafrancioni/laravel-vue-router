@@ -18,12 +18,12 @@ export default {
         <div class="container">
             <div class="row">
 
-                <div class="col-md-4 gy-4" v-for="evento in store.eventArray">
+                <div class="col-md-4 gy-4" v-for="event in store.eventArray">
                     <div class="card h-100">
-                        <div class="card-header">{{ evento.date }}</div>
+                        <div class="card-header">{{ event.date }}</div>
                         <div class="card-body">
-                            <h5 class="card-title">{{ evento.name }}</h5>
-                            <p class="card-text">Restano <b>{{ evento.available_tickets }}</b> biglietti disponibili.
+                            <h5 class="card-title">{{ event.name }}</h5>
+                            <p class="card-text">Restano <b>{{ event.available_tickets }}</b> biglietti disponibili.
                             </p>
                         </div>
                         <div class="card-footer text-center">
