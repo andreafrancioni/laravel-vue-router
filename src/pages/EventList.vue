@@ -29,7 +29,10 @@ export default {
                         <div class="card-footer text-center">
                             <a href="#" class="btn btn-primary">
                                 <font-awesome-icon icon="fa-solid fa-circle-info" class="me-2" />
-                                <span>Scopri di più</span>
+                                <router-link :to="{ name: 'EventDetail', params: { id: event.id } }"
+                                    class="btn btn-primary">
+                                    <span>Details</span>
+                                </router-link>
                             </a>
                         </div>
                     </div>
