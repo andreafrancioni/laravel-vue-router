@@ -3,10 +3,12 @@ import AppHeader from "./components/AppHeader.vue"
 
 import axios from 'axios'; //importo Axios
 import { store } from "./store.js" //state management
+import AppFooter from "./components/AppFooter.vue";
 
 export default {
 	components: {
 		AppHeader,
+		AppFooter,
 	},
 	data() {
 		return {
@@ -40,7 +42,7 @@ export default {
 	</header>
 	<router-view></router-view>
 	<footer>
-		Footer
+		<AppFooter />
 	</footer>
 </template>
 
